@@ -1,1 +1,12 @@
-<p>products works!</p>
+<p>Los mejores productos</p>
+
+<div style="display: flex; flex-wrap: wrap;">
+  <div *ngFor="let producto of productos" style="width: 250px; margin: 10px; border: 1px solid #ccc; padding: 10px;">
+    <img [src]="producto.image" alt="{{ producto.name }}" style="width: 100%; height: auto;" />
+    <h3>{{ producto.name }}</h3>
+    <p>{{ producto.description }}</p>
+    <strong>${{ producto.price }}</strong>
+    <br />
+    <button>Ver más</button>
+  </div>
+</div>

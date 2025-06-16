@@ -1,11 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Product } from '../../services/products';
+import { Products } from '../../services/products';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-products',
-  imports: [],
+  standalone: true, 
+  imports: [CommonModule], 
   templateUrl: './products.html',
-  styleUrl: './products.css'
+  styleUrl: './products.css',
 })
-export class Products {
+export class ProductsComponent implements OnInit {
+  productos: Product[] = [];
 
+  constructor(private productsService: Products) {}
+
+  ngOnInit(): void {
+    this.productos = this.productsService.getProducts();
+  }
 }
