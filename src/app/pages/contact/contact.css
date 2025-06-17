@@ -1,49 +1,50 @@
-html, body {
-      height: 100%;
-      margin: 0;
-    }
+.contacto {
+  padding: 40px;
+  font-family: 'Inter', sans-serif;
+  background: #f8f8f8;
+  text-align: center;
+}
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #f8f8f8;
-      display: flex;
-      flex-direction: column;
-    }
+.contacto h1 {
+  color: #2a597a;
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
 
-    main {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 20px;
-    }
+.contacto p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 30px;
+}
 
-    p {
-      font-size: 2rem;
-      font-weight: bold;
-      color: #2a7a2a;
-      margin-bottom: 30px;
-    }
+.redes-contacto {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
 
-    img {
-      width: 80vw; /* ocupa el 80% del ancho de la ventana */
-      max-width: 600px; /* no pasa de 600px */
-      height: auto;
-      border-radius: 12px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-      transition: transform 0.3s ease;
-      cursor: pointer;
-    }
+.card {
+  background: #ffffff;
+  padding: 20px;
+  width: 250px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
 
-    img:hover {
-      transform: scale(1.05);
-    }
+.card:hover {
+  transform: translateY(-5px);
+}
 
-    footer {
-      padding: 15px;
-      text-align: center;
-      color: #666;
-      font-size: 0.9rem;
-    }
+.card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #333;
+}

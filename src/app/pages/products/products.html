@@ -7,6 +7,19 @@
     <p>{{ producto.description }}</p>
     <strong>${{ producto.price }}</strong>
     <br />
-    <button>Ver más</button>
+    <button (click)="abrirModal(producto)">Ver más</button>
+  </div>
+</div>
+
+<!-- Modal -->
+<div *ngIf="productoSeleccionado" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center;">
+  <div style="background: white; padding: 20px; border-radius: 10px; width: 400px; text-align: center;">
+    <h2>{{ productoSeleccionado.name }}</h2>
+    <img [src]="productoSeleccionado.image" alt="{{ productoSeleccionado.name }}" style="width: 100%; height: auto;" />
+    <p>{{ productoSeleccionado.description }}</p>
+    <strong>${{ productoSeleccionado.price }}</strong>
+    <br /><br />
+    <button (click)="cerrarModal()">Cerrar</button>
   </div>
 </div>

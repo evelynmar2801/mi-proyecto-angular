@@ -1,6 +1,25 @@
 h3 {
-    padding: 20px;
-    color: azure;
-    background-color: black;
-    text-align: center;
+  padding: 20px;
+  color: azure;
+  background-color: black;
+  text-align: center;
+  margin: 0;
+}
+
+p {
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.sociales {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.sociales img {
+  width: 30px;
+  height: 30px;
 }

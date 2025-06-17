@@ -29,7 +29,7 @@ export class Products {
     },
     {
       id: 3,
-      name: '´Patinando sobre hielo',
+      name: 'Patinando sobre hielo',
       price: 390,
       description: 'Pochacco sobre el hielo',
       image: '/img/produ2.jpg',
@@ -43,7 +43,7 @@ export class Products {
     },
   ];
 
-  constructor() {}
+   constructor() {}
 
   getProducts(): Product[] {
     return this.products;

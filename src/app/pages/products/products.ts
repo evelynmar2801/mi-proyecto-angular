@@ -12,10 +12,19 @@ import { CommonModule } from '@angular/common';
 })
 export class ProductsComponent implements OnInit {
   productos: Product[] = [];
+  productoSeleccionado: Product | null = null;
 
   constructor(private productsService: Products) {}
 
   ngOnInit(): void {
     this.productos = this.productsService.getProducts();
+  }
+
+  abrirModal(producto: Product): void {
+    this.productoSeleccionado = producto;
+  }
+
+  cerrarModal(): void {
+    this.productoSeleccionado = null;
   }
 }

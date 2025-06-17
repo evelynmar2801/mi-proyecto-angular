@@ -4,6 +4,8 @@ import { Contact } from './pages/contact/contact';
 import { ProductsComponent  } from './pages/products/products';
 import { Home } from './pages/home/home';
 
+
+
 export const routes: Routes = [
   { path: '', component: Home },  // Página principal
   { path: 'nosotros', component: About },
