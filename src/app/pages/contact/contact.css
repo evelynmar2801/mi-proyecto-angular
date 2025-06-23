@@ -1,20 +1,35 @@
+/* Ocupa toda la altura de la pantalla menos el header y el footer */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 .contacto {
-  padding: 40px;
+  min-height: calc(100vh - 100px); /* Ajusta si tu header/footer ocupan más */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
   font-family: 'Inter', sans-serif;
   background: #f8f8f8;
+}
+
+.contenedor-contacto {
+  max-width: 1200px;
   text-align: center;
 }
 
-.contacto h1 {
+.contenedor-contacto h1 {
   color: #2a597a;
+  font-size: 2.2rem;
   margin-bottom: 10px;
-  font-size: 2rem;
 }
 
-.contacto p {
+.contenedor-contacto p {
   font-size: 1.1rem;
   color: #555;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .redes-contacto {
@@ -27,24 +42,46 @@
 .card {
   background: #ffffff;
   padding: 20px;
-  width: 250px;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  transition: transform 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
 .card img {
-  width: 60px;
-  height: 60px;
+  width: 65px;
+  height: 65px;
+  object-fit: contain;
   margin-bottom: 15px;
 }
 
+.card h3 {
+  margin: 5px 0;
+  color: #2a597a;
+  font-size: 1.2rem;
+}
+
 .card p {
+  color: #444;
   font-size: 1rem;
-  color: #333;
+}
+
+@media (max-width: 768px) {
+  .redes-contacto {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
 }
